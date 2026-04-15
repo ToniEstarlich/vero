@@ -64,6 +64,7 @@
 
   filter: contrast(1.05) brightness(0.95);
   overflow: hidden;
+  
 }
 
 /* =========================
@@ -89,10 +90,10 @@
 
   background:
     radial-gradient(circle at 85% 50%,
-      rgba(0,0,0,0.95) 0%,
-      rgba(0,0,0,0.75) 25%,
+      rgba(0,0,0,0.75) 0%,
+      rgba(0,0,0,0.95) 25%,
       rgba(0,0,0,0.35) 45%,
-      transparent 70%);
+      transparent 90%);
 
   z-index: 3;
 
@@ -101,14 +102,14 @@
   opacity: 0.9;
 }
 
-/* opcional glow artístico */
+/* optional glow artístico */
 .hero-overlay{
   position: absolute;
   inset: 0;
   z-index: 1;
 
   background:
-    radial-gradient(circle at top left, rgba(126,252,255,0.08), transparent 55%),
+    radial-gradient(circle at top left, rgba(126,252,255,0.08), transparent 25%),
     radial-gradient(circle at bottom right, rgba(202,167,255,0.10), transparent 60%);
 }
 
@@ -577,6 +578,7 @@
 
   .hero-left {
     height: 800px;
+    background-position: left center;
   }
 
   #home  {
