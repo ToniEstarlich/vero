@@ -5,9 +5,25 @@
 }
 
 .logo-wi {
+  border-radius: 50%;
+  border: 0px solid #caa7ff;
+  display: inline-block;
+  padding: 10px;
+  
+  text-align: justify;
+  transform: translateY(-15px);
+  font-size: 500%;
+
+  background: linear-gradient(90deg, #b6bfe9, #764ba2, #667eea, #b6bfe9);
+  background-size: 600% 600%;
+  animation: text-gradient 6s ease-in-out infinite;
+ 
+}
+
+/*.logo-wi {
   display: inline-block;
   font-size: 6.2em;
-  color:black;
+  color:rgb(0, 0, 0);
   border-radius: 50%;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -35,18 +51,33 @@
   }
 }
 
-/* nav logo */
 .nav-logo-wi {
-  letter-spacing: -0.04em;
-  font-size: 1.0em;
-  color:black;
+  font-size: 10px;
+  font-weight: 100;
+  padding: 4px 4px;
+  line-height: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  border: 2px solid #caa7ff;
   border-radius: 50%;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  letter-spacing: -0.05em;
 
-  letter-spacing: -0.02em;
-  transform: translateY(-10px);
+  display: inline-block;
+  transform: translateY(-2px);
+}
 
- background-color: #caa7ff;
-
+/* nav logo 
+.nav-logo-wi {
+  letter-spacing: 0.06em;
+  border-radius: 50%;
+  color: #caa7ff;
+  border: 2px solid #caa7ff;
+  display: inline-block;
+  font-size: 15px;
+  text-align: justify;
+  transform: translateY(-0px);
+  font-weight: 400;
 }
