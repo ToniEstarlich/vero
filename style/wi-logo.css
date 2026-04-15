@@ -1,0 +1,53 @@
+@keyframes text-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.logo-wi {
+  display: inline-block;
+  font-size: 6.2em;
+  color:black;
+  border-radius: 50%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+
+ 
+  transform: translateY(-10px);
+
+  background: linear-gradient(90deg, #b6bfe9, #764ba2, #667eea, #b6bfe9);
+  background-size: 600% 600%;
+  animation: text-gradient 6s ease-in-out infinite;
+}
+
+/* 📱 Responsive para móvil */
+@media (max-width: 768px) {
+  .logo-wi {
+    font-size: 2.5em;
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-wi {
+    font-size: 3.8em;
+    transform: translateY(-3px);
+  }
+}
+
+/* nav logo */
+.nav-logo-wi {
+  letter-spacing: -0.04em;
+  font-size: 1.0em;
+  color:black;
+  border-radius: 50%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+
+  letter-spacing: 0em;
+  transform: translateY(-10px);
+
+  background: linear-gradient(90deg, #b6bfe9, #764ba2, #667eea, #b6bfe9);
+  background-size: 600% 600%;
+  animation: text-gradient 6s ease-in-out infinite;
+}
