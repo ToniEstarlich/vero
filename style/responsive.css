@@ -1,0 +1,136 @@
+/* ========================= MOBILE / TABLET UPGRADE ========================= */
+@media (max-width: 1000px) {
+
+  .layout {
+    display: block;
+  }
+
+  /* 🔥 HERO se convierte en portada real */
+
+  .hero-left {
+    height: 1000px;
+  }
+
+  .text-home {
+    font-size: 130px;
+    letter-spacing: 6px;
+  }
+
+  /* overlay cinematográfico */
+  .hero-left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(to top, rgba(0,0,0,0.95), transparent 60%),
+      radial-gradient(circle at center, rgba(126,252,255,0.08), transparent 60%);
+  }
+
+  /* content pasa debajo tipo scroll */
+  .content {
+    padding: 25px 18px;
+  }
+
+  /* topbar flotante limpio */
+  .topbar {
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(16px);
+  }
+
+  /* ========================= 🔥 HEADER ÉPICO MOBILE ========================= */
+  header {
+    margin-top: -120px; /* sube encima del hero */
+    text-align: center;
+    padding-top: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  header h1 {
+    font-size: 44px;
+    letter-spacing: 8px;
+    background: linear-gradient(90deg, #fff, #caa7ff, #7efcff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(202,167,255,0.25);
+    animation: glowTitle 4s ease-in-out infinite alternate;
+  }
+
+  .text-home {
+    font-size: 70px;
+  }
+
+  header p {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 15px auto;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* tags estilo UI futurista */
+  .tagline {
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .pill {
+    font-size: 10px;
+    padding: 7px 10px;
+    letter-spacing: 2px;
+  }
+
+  /* grid 1 columna */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+
+/* ========================= SMALL MOBILE ========================= */
+@media (max-width: 412px) {
+
+  .hero-left {
+    height: 800px;
+    background-position: left center;
+  }
+
+  #home  {
+    margin-top: -300px;
+  }
+
+  .text-home {
+    font-size: 60px;
+    letter-spacing: 6px;
+  }
+
+  header h1 {
+    font-size: 36px;
+    letter-spacing: 6px;
+  }
+
+  header p {
+    font-size: 13px;
+  }
+
+  .menu-btn {
+    padding: 10px 12px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* Ipad mini/air/pro */
+@media (max-width: 1024px) {
+    .text-home {
+    font-size: 80px;
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 1366px) {
+}

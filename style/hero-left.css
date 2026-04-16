@@ -1,0 +1,84 @@
+ /* Left panel */
+.hero-left{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  background:
+    linear-gradient(to right,
+      rgba(0,0,0,0) 30%,
+      rgba(0,0,0,1) 100%),
+    url("../Images/vero.png");
+
+  background-size: cover;
+  background-position: center;
+
+  filter: contrast(1.05) brightness(0.95);
+  overflow: hidden;
+  
+}
+
+/* =========================
+   BASE BLACK FRAME (TU ORIGINAL)
+   ========================= */
+.hero-left::after{
+  content:"";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%);
+  opacity: 0.85;
+  z-index: 2;
+}
+
+/* =========================
+   INK LOOP OVERLAY 
+   ========================= */
+.hero-left::before{
+  content:"";
+  position: absolute;
+  inset: -20%;
+
+  background:
+    radial-gradient(circle at 85% 50%,
+      rgba(0,0,0,0.75) 0%,
+      rgba(0,0,0,0.95) 25%,
+      rgba(0,0,0,0.35) 45%,
+      transparent 90%);
+
+  z-index: 3;
+
+  animation: inkLoop 6s ease-in-out infinite;
+  filter: blur(1px);
+  opacity: 0.9;
+}
+
+/* optional glow artístico */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    radial-gradient(circle at top left, rgba(126,252,255,0.08), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(202,167,255,0.10), transparent 60%);
+}
+
+/* =========================
+   ANIMACIÓN LOOP TINTA
+   ========================= */
+@keyframes inkLoop{
+  0%{
+    transform: translateX(40%) scale(1);
+    opacity: 0.6;
+  }
+  50%{
+    transform: translateX(0%) scale(1.05);
+    opacity: 0.9;
+  }
+  100%{
+    transform: translateX(40%) scale(1);
+    opacity: 0.6;
+  }
+}
+    /* end hero left panel */

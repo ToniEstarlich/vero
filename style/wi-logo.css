@@ -1,3 +1,132 @@
+/* Text home */
+@keyframes text-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes tracking {
+  0% {
+    opacity: 0;
+    letter-spacing: -0.4em;
+    transform: translateY(10px);
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+    letter-spacing: 0.25em;
+    transform: translateY(0);
+  }
+}
+
+.text-home {
+  background: linear-gradient(90deg, #b6bfe9, #764ba2, #667eea, #b6bfe9);
+  background-size: 600% 600%;
+
+  font-size: 150px;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  animation:
+    text-gradient 6s ease-in-out infinite,
+    tracking 8.8s ease-out forwards;
+
+  display: inline-block;
+  will-change: transform, letter-spacing, background-position;
+}
+
+/* end to the text home */
+
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 16px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.menu-btn {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 12px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.menu-btn:hover {
+  transform: scale(1.06);
+  border-color: rgba(202, 167, 255, 0.6);
+  box-shadow: 0 0 25px rgba(202, 167, 255, 0.25);
+}
+
+/* Header */
+header {
+  margin-top: 70px;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+header h1 {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+header p {
+  margin-top: 18px;
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 500px;
+}
+
+.tagline {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Pill text*/
+
+
+.pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pill.glow {
+  border-color: rgba(126, 252, 255, 0.5);
+  box-shadow: 0 0 20px rgba(126, 252, 255, 0.2);
+}
+
+
+/* logo WI Intro & Navbar */
+
 @keyframes text-gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -20,21 +149,6 @@
  
 }
 
-/*.logo-wi {
-  display: inline-block;
-  font-size: 6.2em;
-  color:rgb(0, 0, 0);
-  border-radius: 50%;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
- 
-  transform: translateY(-10px);
-
-  background: linear-gradient(90deg, #b6bfe9, #764ba2, #667eea, #b6bfe9);
-  background-size: 600% 600%;
-  animation: text-gradient 6s ease-in-out infinite;
-}
 
 /* 📱 Responsive para móvil */
 @media (max-width: 768px) {
@@ -67,17 +181,4 @@
 
   display: inline-block;
   transform: translateY(-2px);
-}
-
-/* nav logo 
-.nav-logo-wi {
-  letter-spacing: 0.06em;
-  border-radius: 50%;
-  color: #caa7ff;
-  border: 2px solid #caa7ff;
-  display: inline-block;
-  font-size: 15px;
-  text-align: justify;
-  transform: translateY(-0px);
-  font-weight: 400;
 }
