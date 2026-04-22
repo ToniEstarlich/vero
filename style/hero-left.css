@@ -6,11 +6,12 @@
 
   background:
     linear-gradient(to right,
-      rgba(0,0,0,0) 30%,
+      rgba(0,0,0,0) 55%,
       rgba(0,0,0,1) 100%),
-    url("../Images/vero.png");
+    url("../Images/vero2.png");
 
-  background-size: cover;
+  background-size: 120%;
+  background-repeat: no-repeat;
   background-position: center;
 
   filter: contrast(1.05) brightness(0.95);
@@ -26,59 +27,89 @@
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%);
-  opacity: 0.85;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%);
+  opacity: 0.4;
   z-index: 2;
 }
 
 /* =========================
    INK LOOP OVERLAY 
    ========================= */
+
 .hero-left::before{
   content:"";
   position: absolute;
-  inset: -20%;
-
-  background:
-    radial-gradient(circle at 85% 50%,
-      rgba(0,0,0,0.75) 0%,
-      rgba(0,0,0,0.95) 25%,
-      rgba(0,0,0,0.35) 45%,
-      transparent 90%);
-
-  z-index: 3;
-
-  animation: inkLoop 6s ease-in-out infinite;
-  filter: blur(1px);
-  opacity: 0.9;
-}
-
-/* optional glow artístico */
-.hero-overlay{
-  position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 3;
+  pointer-events: none;
 
   background:
-    radial-gradient(circle at top left, rgba(126,252,255,0.08), transparent 25%),
-    radial-gradient(circle at bottom right, rgba(202,167,255,0.10), transparent 60%);
+    radial-gradient(circle at 110% 20%,
+      rgba(0,0,0,0.9) 0%,
+      rgba(0,0,0,0.35) 25%,
+      transparent 70%),
+
+    radial-gradient(circle at 115% 55%,
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.4) 30%,
+      transparent 75%),
+
+    radial-gradient(circle at 110% 85%,
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.3) 35%,
+      transparent 80%);
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  filter: blur(3px);
+  opacity: 0.65;
+
+  animation: waveEdge 8s ease-in-out infinite;
 }
 
-/* =========================
-   ANIMACIÓN LOOP TINTA
-   ========================= */
-@keyframes inkLoop{
+@keyframes waveEdge{
   0%{
-    transform: translateX(40%) scale(1);
-    opacity: 0.6;
+    background-position: 0% 0%;
   }
   50%{
-    transform: translateX(0%) scale(1.05);
-    opacity: 0.9;
+    background-position: -30px 0%;
   }
   100%{
-    transform: translateX(40%) scale(1);
-    opacity: 0.6;
+    background-position: 0% 0%;
   }
 }
+
+.hero-left::before{
+  animation: waveMove 8s ease-in-out infinite;
+}
+
     /* end hero left panel */
+
+  /* responsive*/
+@media (max-width: 768px) {
+  .hero-left {
+    position: sticky;
+    height: 50vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0) 70%), url("../Images/vero3.png");
+    background-size: 100%, 110%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center 60px !important;
+    filter: contrast(1.05) brightness(0.95);
+  }
+
+  /* SOLO UN OVERLAY (fade suave) */
+  .hero-left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 60%);
+    opacity: 0.6 !important;
+  }
+
+  .hero-left::before {
+    display: none;
+  }
+}
