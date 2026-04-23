@@ -84,7 +84,7 @@
   animation: waveMove 8s ease-in-out infinite;
 }
 
-    /* end hero left panel */
+ /* end hero left panel */
 
   /* responsive*/
 @media (max-width: 768px) {
@@ -98,7 +98,7 @@
     filter: contrast(1.05) brightness(0.95);
   }
 
-  /* SOLO UN OVERLAY (fade suave) */
+  /* ONLY AN OVERLAY  */
   .hero-left::after {
     content: "";
     position: absolute;
@@ -111,5 +111,19 @@
 
   .hero-left::before {
     display: none;
+  }
+}
+
+/*tablets*/
+
+@media (min-width: 769px) and (max-width: 1180px){
+  .hero-left{
+    background-position: center, center 60px !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .hero-left{
+    background-size: 300%, 310% !important;
   }
 }
